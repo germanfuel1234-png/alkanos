@@ -1096,56 +1096,6 @@ if (footerElement) {
 
 
 
-        /// FORM
-        // Update modal content based on the link's data attributes
-        $('#formProducts').on('show.bs.modal', function (event) {
-            var link = $(event.relatedTarget); // Link that triggered the modal
-            var subjectKey = link.data('subject'); // Assume this is a key for the translation
-        
-            // Translate the subject using the languageData
-            var translatedSubject = languageData[subjectKey] ? languageData[subjectKey] : subjectKey; // Fallback to the key if no translation is found
-        
-            // Update text elements and hidden fields with the translated subject
-            $('#emailSubjectText').text(translatedSubject);
-            $('#emailSubject').val(translatedSubject);
-        });
-        
-
-        // Handle form submission if needed
-        $('#emailForm').submit(function (event) {
-            // Add your logic to handle form submission
-            event.preventDefault(); // Prevent the default form submission
-            // Perform your actions (e.g., send email)
-            // Close the modal if needed: $('#formProducts').modal('hide');
-        });
-
-
-        $('#formProducts').on('show.bs.modal', function (event) {
-            var link = $(event.relatedTarget); // Link that triggered the modal
-            var modal = $(this);
-        
-            // Assuming the product name is in an <h1> tag within the same container as the link
-            var productName = link.closest('.product_info').find('h1').text();
-        
-            // Retrieve the base message key from the link's data-subject attribute
-            var baseSubjectKey = link.data('subject');
-        
-            // Retrieve the base message using the key. This assumes you have a method to get translated messages
-            // For the sake of this example, let's say the message template is in your languageData object
-            var baseMessage = languageData[baseSubjectKey] || '[product]'; // e.g., "I am interested in [product]. Please contact me."
-
-            // If your message template has a placeholder for the product name, replace it with the actual product name
-            var fullMessage = baseMessage.replace('[product]', productName);
-        
-            // Now, set the fullMessage as the data-subject for the link. Though this is not directly altering the link,
-            // you can use this fullMessage in your modal's content or email subject
-            // Example: updating a hidden input field or any element inside the modal that uses this value
-            $('#emailSubject').val(fullMessage); // If you have an input to hold the subject
-            $('#emailSubjectText').text(fullMessage); // If you display the subject somewhere in the modal
-        });
-
-
-
 var languageData = {};
 
 function loadLanguageFile(language, callback) {

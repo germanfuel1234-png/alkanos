@@ -431,6 +431,16 @@
     "FORM_text_7":"+54 11 2150-3675",
     "FORM_text_8":"alkanos@alkanos.com.ar",
 
+    "CONTACT_lead":"Leave us your inquiry about our products, or any other question you have, and we'll get back to you shortly.",
+    "CONTACT_empresa":"Company",
+    "CONTACT_producto":"Product of interest",
+    "CONTACT_opcional":"(optional)",
+    "CONTACT_select":"Select...",
+    "CONTACT_opt_aditivos":"Additives for PU (UNIKAT)",
+    "CONTACT_opt_otras":"Other inquiries",
+    "CONTACT_mensaje":"Message",
+    "CONTACT_closing":"Leave your inquiry here about our products or any other question — our specialists are here to assist you.",
+
     
     "MACH_text_1": "High-performance machines for polyurethane foam",
     "MACH_text_2": "We offer foam production machinery from world-class suppliers",

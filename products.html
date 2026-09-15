@@ -43,111 +43,6 @@
 
 
   
-<!-- Modal -->
-<div class="modal fade" id="formProducts" tabindex="-1" aria-labelledby="formProductsLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg" >
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-
-                <div class="row g-0">
-                    
-                    <div class="col-12 col-sm-5 order-last order-sm-first ">
-                                        
-                        <div id="mensaje_form">
-                            <p><span id="emailTitleText"></span></p>
-                            <p><span id="emailSubjectText"></span></p>
-                        </div>
-
-
-                        
-                                        
-
-                                        <form    id="contactForm"
-                                            >
-
-                                            <!-- <input type="hidden" id="emailSubject" name="emailSubject"> -->
-
-                                            <div class="form-group">
-                                                <input type="text" name="name" class="form-control" id="name" required>
-                                                <label for="name" class="translate" data-key="FORM_name">Nombre</label>
-                                            </div>
-                                            <div class="form-group">
-                                                <input type="email" name="email" class="form-control" id="email" required>
-                                                <label for="email" class="translate" data-key="FORM_email">Email</label>
-                                            </div>
-                                            <div class="form-group">
-                                                <input type="tel" name="phone" class="form-control" id="phone" required>
-                                                <label for="phone" class="translate" data-key="FORM_phone">Teléfono</label>
-                                            </div>
-                                            <button type="submit" class="btn btn-primary translate" data-key="FORM_msg">Enviar Mensaje</button>
-                                        </form>
-
-
-
-                                        <script>
-                                            document.getElementById('contactForm').addEventListener('submit', function(e) {
-                                                e.preventDefault(); // Prevent the default form submission
-                                            
-                                                let formData = new FormData(this); // Create a FormData object from the form
-                                            
-                                                fetch('https://alkanos.com.ar/alkanos_form.php', {
-                                                    method: 'POST',
-                                                    body: formData
-                                                })
-                                                .then(response => response.text()) // Convert the response to text
-                                                .then(text => {
-                                                    if (text.startsWith('Mensaje enviado')) {
-                                                        window.location.href = 'gracias.html'; // Redirect to thank-you page on success
-                                                    } else {
-                                                        document.getElementById('mensaje_form').innerHTML = text; // Show validation/error message in the modal
-                                                    }
-                                                })
-                                                .catch(error => {
-                                                    console.error('Error:', error);
-                                                });
-                                            });
-                                            </script>
-                                            
-
-
-                    </div>
-
-                    <div class="col-12 col-sm-7 order-first order-sm-last px-0 px-sm-4" id="modal_box">
-                        <h2 class="translate" data-key="FORM_text_1">Como podemos asistirlo?</h2>
-                        <p class="translate" data-key="FORM_text_2">En Alkanos entendemos la importancia de encontrar la solución que satisfaga las necesidades de su industria.</p>
-
-                        <p class="translate" data-key="FORM_text_3">Por favor, envíenos información sobre la aplicación que le interesa y sus requisitos técnicos. Nuestros especialistas están para asistirlo. </p>
-
-                        <h3 class="translate" data-key="FORM_text_4">Visítenos</h3>
-
-                        <p class="translate" data-key="FORM_text_5">Arduin D. Barbieri 2273 (B1852LHG)<br>
-                        Parque Industrial Burzaco - Buenos Aires, Argentina</p>
-
-                        <h3 class="translate" data-key="FORM_text_6">Conversemos</h3>
-                        <p class="translate" data-key="FORM_text_7">+54 11 2150-3675</p>
-
-                        <p><a href="mailto:alkanos@alkanos.com.ar" class="translate" data-key="FORM_text_8">alkanos@alkanos.com.ar</a></p>
-                        
-                    </div>
-
-                </div>
-
-
-            </div>
-        </div>
-    </div>
-</div>
-
-
-
-  
-
-
-
-
 <div id="full-content">
     <div id="box-shadow" class="container-fluid">
         
@@ -179,7 +74,7 @@
 
                     <p class="lead translate" data-key="PRO_text_3">Conozca más sobre nuestra línea completa de polioles y sus aplicaciones. </p>
 
-                    <p><a href="#" data-bs-toggle="modal" data-bs-target="#formProducts" data-subject="productInquiry" class="btn btn-lg alk-btn translate" data-key="PRO_text_4">Más información</a></p>
+                    <p><a href="contacto.html?producto=polioles" class="btn btn-lg alk-btn translate" data-key="PRO_text_4">Más información</a></p>
             </div>
             <div class="col-12 col-sm-6" id="product_1">
                 <ul class="ul_right">
@@ -207,7 +102,7 @@
                 </p>
 
                 <p class="lead translate" data-key="PRO_text_13">Consulte sobre los distintos isocianatos que ofrecemos, fabricados con estrictos estándares medioambientales y de calidad.</p>
-                <p><a href="#" data-bs-toggle="modal" data-bs-target="#formProducts" data-subject="productInquiry" class="btn btn-lg alk-btn translate" data-key="PRO_text_14">Más información</a></p>
+                <p><a href="contacto.html?producto=isocianatos" class="btn btn-lg alk-btn translate" data-key="PRO_text_14">Más información</a></p>
             </div>
         </div>
 
@@ -222,7 +117,7 @@
 
                 <p class="lead translate" data-key="PRO_text_17">Encuentre la mejor solución para sus necesidades técnicas y de proceso. </p>
 
-                <p><a href="#" data-bs-toggle="modal" data-bs-target="#formProducts" data-subject="productInquiry" class="btn btn-lg alk-btn translate" data-key="PRO_text_18">Más información</a></p>
+                <p><a href="contacto.html?producto=aditivos-pu" class="btn btn-lg alk-btn translate" data-key="PRO_text_18">Más información</a></p>
             </div>
             <div class="col-12 col-sm-6" id="product_3">
                 <ul class="ul_right">
@@ -253,7 +148,7 @@
                     Nuestros sistemas <b>ALKURAN F</b> garantizan el confort y la durabilidad de la espuma flexible. Con nuestra amplia línea de sistemas, facilitamos sus procesos de fabricación de muebles, almohadas, colchones, artículos ortopédicos, automotores y otros tantos bienes de la vida cotidiana. 
                 </p>
                 <p class="lead translate" data-key="PRO_text_32"><b>ALKURAN F</b> es la solución para lograr el diseño y la calidad que busca en su espuma flexible. </p>
-                <p><a href="#" data-bs-toggle="modal" data-bs-target="#formProducts" data-subject="productInquiry" class="btn btn-lg alk-btn translate"  data-key="PRO_text_33">Más información</a></p>
+                <p><a href="contacto.html?producto=sistemas-flexibles" class="btn btn-lg alk-btn translate" data-key="PRO_text_33">Más información</a></p>
             </div>
         </div>
 
@@ -274,7 +169,7 @@
                     Contacte a nuestros asesores técnicos para alcanzar los mejores resultados para su proceso. 
                 </p>
 
-                <p><a href="#" data-bs-toggle="modal" data-bs-target="#formProducts" data-subject="productInquiry" class="btn btn-lg alk-btn translate" data-key="PRO_text_39">Más información</a></p>
+                <p><a href="contacto.html?producto=sistemas-rigidos" class="btn btn-lg alk-btn translate" data-key="PRO_text_39">Más información</a></p>
             </div>
             <div class="col-12 col-sm-6" id="product_5">
                 <ul class="ul_right">
@@ -303,7 +198,7 @@
                     Nuestra línea de sistemas para espumas microcelulares cubre una amplia gama de productos y aplicaciones de espuma rígida y flexible. Las espumas estructurales, con piel integral, o alto desempeño mecánico se utilizan en aplicaciones de la industria automotriz, en minería, para decoración, en artículos deportivos, en maquetas y en muchos otros rubros. Gracias a su enorme versatilidad, las posibilidades son innumerables.
                 </p>
                 <p class="lead translate" data-key="PRO_text_51">Contacte a nuestros asesores técnicos para conocer la fórmula que mejor se adecúe a sus necesidades. </p>
-                <p><a href="#" data-bs-toggle="modal" data-bs-target="#formProducts" data-subject="productInquiry" class="btn btn-lg alk-btn translate" data-key="PRO_text_52">Más información</a></p>
+                <p><a href="contacto.html?producto=sistemas-microcelular" class="btn btn-lg alk-btn translate" data-key="PRO_text_52">Más información</a></p>
             </div>
         </div>
 
@@ -315,7 +210,7 @@
 
                 <p class="lead translate" data-key="PRO_text_55">Contacte a nuestro equipo técnico para conocer más. </p>
                 
-                <p><a href="#" data-bs-toggle="modal" data-bs-target="#formProducts" data-subject="productInquiry" class="btn btn-lg alk-btn translate" data-key="PRO_text_56">Más información</a></p>
+                <p><a href="contacto.html?producto=glicoles" class="btn btn-lg alk-btn translate" data-key="PRO_text_56">Más información</a></p>
             </div>
             <div class="col-12 col-sm-6" id="product_7">
                 <ul class="ul_right">

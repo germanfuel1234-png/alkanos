@@ -440,6 +440,16 @@
     "FORM_text_7":"+54 11 2150-3675",
     "FORM_text_8":"alkanos@alkanos.com.ar",
 
+    "CONTACT_lead":"Dejanos tu consulta sobre nuestros productos, o cualquier otra consulta que tengas, y te contactamos a la brevedad.",
+    "CONTACT_empresa":"Empresa",
+    "CONTACT_producto":"Producto a consultar",
+    "CONTACT_opcional":"(opcional)",
+    "CONTACT_select":"Seleccionar...",
+    "CONTACT_opt_aditivos":"Aditivos para PU (UNIKAT)",
+    "CONTACT_opt_otras":"Otras consultas",
+    "CONTACT_mensaje":"Mensaje",
+    "CONTACT_closing":"Dejá acá tu consulta para nuestros productos o cualquier otra consulta — nuestros especialistas están para asistirlo.",
+
 
 
     "MACH_text_1":"Máquinas de alta performance para espuma de poliuretano",
